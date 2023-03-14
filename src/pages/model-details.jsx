@@ -11,8 +11,6 @@ export function ModelDetails() {
     const { modelId } = useParams()
     const [loanOffer, setLoanOffer] = useState({ loanAmount: 1000, duration: 10 })
 
-
-
     useEffect(() => {
         loadCar()
         loadCarDetails()
@@ -63,20 +61,14 @@ export function ModelDetails() {
         }
 
         const averageMonthlyPayment = totalMonthlyPayment / duration
-        const totalPayment = totalMonthlyPayment * duration
+        const totalPayment = totalMonthlyPayment
 
         return {
             averageMonthlyPayment: averageMonthlyPayment.toFixed(2),
-            totalPayment: (totalPayment / 10).toFixed(2)
-        };
+            totalPayment: totalPayment.toFixed(2)
+        }
 
     }
-
-    function getTotalPayment() {
-
-    }
-
-
 
     return (
         <>
@@ -117,6 +109,7 @@ export function ModelDetails() {
                                     <input type="range"
                                         min={500}
                                         max={10000}
+                                        step={500}
                                         id="loanAmount"
                                         name="loanAmount"
                                         value={loanOffer.amount}
