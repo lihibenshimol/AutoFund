@@ -61,11 +61,10 @@ export function ModelDetails() {
         }
 
         const averageMonthlyPayment = totalMonthlyPayment / duration
-        const totalPayment = totalMonthlyPayment
-
+        
         return {
             averageMonthlyPayment: averageMonthlyPayment.toFixed(2),
-            totalPayment: totalPayment.toFixed(2)
+            totalPayment: totalMonthlyPayment.toFixed(2)
         }
 
     }
