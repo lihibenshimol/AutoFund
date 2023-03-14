@@ -141,15 +141,15 @@ function _createDemoCars() {
                     },
                     {
                         id: 'ee201',
-                        name: 'Spacestar',
+                        name: 'Outlander',
                         price: 55000,
-                        img: 'https://big-lease.co.il/wp-content/uploads/2020/02/mitsubishi-spacestar-caver.jpg'
+                        img: 'https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/mitsubishi-outlander-my22-index-1.png'
                     },
                     {
                         id: 'ee204',
-                        name: 'Attrage',
+                        name: 'Eclipse',
                         price: 55000,
-                        img: 'https://images.autoboom.co.il/SaQSCEm0MnNNl8Te_v2BsqlkBEfAFCIpwW7Ivi195ro/fit/1200/1200/sm/0/Z3M6Ly9hdXRvYm9vbS1pbWFnZXMvMDAwLzAwMC8wMzUvMzU0NzkuanBn.jpg'
+                        img: 'https://baycitymitsubishi.co.nz/wp-content/uploads/2021/06/eclipse-cross-phev-vrx-white.jpg'
                     }
                 ]
             },
