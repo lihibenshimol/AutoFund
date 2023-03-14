@@ -1,0 +1,93 @@
+.model-details {
+
+    display: flex;
+    justify-content: space-evenly;
+
+    .details-container {
+
+        display: flex;
+        flex-direction: column;
+
+
+        .details {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 20px;
+
+            img {
+                width: 350px;
+                height: 350px;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                span {
+                    font-family: lato-light;
+                }
+            }
+
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+    }
+
+}
+
+
+.finance-offer-popup {
+    padding: 40px 20px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #d5d5d5;
+    color: $clr1;
+    border-radius: 4px;
+
+    .title {
+        font-size: 2em;
+    }
+
+    h1,
+    h3 {
+        align-self: center;
+        color: $clr5;
+    }
+
+    .sliders {
+        display: flex;
+        justify-content: space-evenly;
+
+        span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .offer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+            font-family: lato-light;
+        }
+
+        span {
+            background-color: #8d99ae;
+            border-radius: 4px;
+            padding: 4px;
+            color: $clr6;
+        }
+    }
+
+}

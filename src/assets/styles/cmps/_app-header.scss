@@ -1,0 +1,25 @@
+.app-header {
+    background-color: $clr1;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $clr4;
+    margin-bottom: 20px;
+    
+    
+    nav {
+        // font-size: 1em;
+        padding: 5px;
+        
+        a {
+            color: $clr4;
+        }
+    }
+
+    nav a:first-child {
+        margin-right: 30px;
+    }
+
+
+}
