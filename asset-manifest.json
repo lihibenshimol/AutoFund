@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.31b103ce.css",
-    "main.js": "/static/js/main.1270f26d.js",
-    "static/media/Lato-Light.ttf": "/static/media/Lato-Light.c7400fcad9e48ca9043f.ttf",
-    "static/media/Lato-Regular.ttf": "/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
-    "static/media/logo.png": "/static/media/logo.8523ccdec3239a5958ad.png",
-    "index.html": "/index.html",
-    "main.31b103ce.css.map": "/static/css/main.31b103ce.css.map",
-    "main.1270f26d.js.map": "/static/js/main.1270f26d.js.map"
+    "main.css": "/AutoFund/static/css/main.89a75ce0.css",
+    "main.js": "/AutoFund/static/js/main.1963e746.js",
+    "static/media/Lato-Light.ttf": "/AutoFund/static/media/Lato-Light.c7400fcad9e48ca9043f.ttf",
+    "static/media/Lato-Regular.ttf": "/AutoFund/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
+    "static/media/logo.png": "/AutoFund/static/media/logo.8523ccdec3239a5958ad.png",
+    "index.html": "/AutoFund/index.html",
+    "main.89a75ce0.css.map": "/AutoFund/static/css/main.89a75ce0.css.map",
+    "main.1963e746.js.map": "/AutoFund/static/js/main.1963e746.js.map"
   },
   "entrypoints": [
-    "static/css/main.31b103ce.css",
-    "static/js/main.1270f26d.js"
+    "static/css/main.89a75ce0.css",
+    "static/js/main.1963e746.js"
   ]
 }
