@@ -106,9 +106,9 @@ export function ModelDetails() {
                                 <span>
                                     <label htmlFor="loanAmount">Loan amount: {loanOffer.loanAmount} NIS</label>
                                     <input type="range"
-                                        min={500}
-                                        max={10000}
                                         step={500}
+                                        min={0}
+                                        max={20000}
                                         id="loanAmount"
                                         name="loanAmount"
                                         value={loanOffer.amount}
@@ -119,7 +119,7 @@ export function ModelDetails() {
                                 <span>
                                     <label htmlFor="duration">Duration: {loanOffer.duration} months</label>
                                     <input type="range"
-                                        min={5}
+                                        min={3}
                                         max={36}
                                         id="duration"
                                         name="duration"
