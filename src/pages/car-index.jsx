@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { carService } from '../services/car.service.local.js'
 import { Link, useNavigate } from 'react-router-dom'
+import { AppHeader } from '../cmps/app-header.jsx'
 
 export function CarIndex() {
 
@@ -29,6 +30,7 @@ export function CarIndex() {
 
     return (
         <div>
+            <AppHeader />
             <main>
                 {cars && <article className="car-list">
                     {cars.map(car =>

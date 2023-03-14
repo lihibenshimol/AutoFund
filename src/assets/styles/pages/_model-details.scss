@@ -1,24 +1,57 @@
-.model-details {
+.details-header {
 
+    background-color: $clr1;
     display: flex;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        
+        a {
+            color: inherit;
+        }
+    }
+
+    img {
+        height: 300px;
+        width: 300px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+}
+
+.model-details {
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    gap: 20px;
 
-    .details-container {
 
+    .container {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10em;
 
+        .details-container {
 
-        .details {
+            display: flex;
+            flex-direction: column;
+
             display: flex;
             align-items: center;
             gap: 40px;
             padding: 20px;
 
-            img {
-                width: 350px;
-                height: 350px;
-            }
 
             .info {
                 display: flex;
@@ -30,64 +63,65 @@
                 }
             }
 
+
+
+            .actions {
+                display: flex;
+                justify-content: space-between;
+                gap: 50px;
+            }
         }
 
-        .actions {
-            display: flex;
-            justify-content: space-between;
-            gap: 50px;
-        }
     }
 
-}
 
-
-.finance-offer-popup {
-    padding: 40px 20px;
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #d5d5d5;
-    color: $clr1;
-    border-radius: 4px;
-
-    .title {
-        font-size: 2em;
-    }
-
-    h1,
-    h3 {
-        align-self: center;
-        color: $clr5;
-    }
-
-    .sliders {
-        display: flex;
-        justify-content: space-evenly;
-
-        span {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
-
-    .offer {
+    .finance-offer-popup {
+        padding: 40px 20px;
+        width: 600px;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        justify-content: space-between;
+        background-color: #d5d5d5;
+        color: $clr1;
+        border-radius: 4px;
 
+        .title {
+            font-size: 2em;
+        }
+
+        h1,
         h3 {
-            font-family: lato-light;
+            align-self: center;
+            color: $clr5;
         }
 
-        span {
-            background-color: #8d99ae;
-            border-radius: 4px;
-            padding: 4px;
-            color: $clr6;
+        .sliders {
+            display: flex;
+            justify-content: space-evenly;
+
+            span {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
         }
+
+        .offer {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            h3 {
+                font-family: lato-light;
+            }
+
+            span {
+                background-color: #747476;
+                border-radius: 4px;
+                padding: 4px;
+                color: $clr6;
+            }
+        }
+
     }
-
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import { AppHeader } from "../cmps/app-header"
 import { carService } from "../services/car.service.local"
 
 
@@ -23,6 +24,7 @@ export function Models() {
 
     return (
         <>
+        <AppHeader />
             <div className="model-page main-container">
 
                 <h1>{model?.vendor}</h1>

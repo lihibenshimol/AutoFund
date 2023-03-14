@@ -10,7 +10,7 @@ export function RootCmp() {
 
     return (
         <div>
-            <AppHeader />
+            {/* <AppHeader /> */}
             <main>
                 <Routes>
                     <Route  exact={true} element={<CarIndex/>} path='/' />

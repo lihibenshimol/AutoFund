@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { NavLink, useNavigate, useParams } from "react-router-dom"
 import { carService } from "../services/car.service.local"
 
 
@@ -9,7 +9,7 @@ export function ModelDetails() {
     const [popup, togglePopup] = useState(false)
     const { carName } = useParams()
     const { modelId } = useParams()
-    const [loanOffer, setLoanOffer] = useState({ loanAmount: 1000, duration: 1 })
+    const [loanOffer, setLoanOffer] = useState({ loanAmount: 1000, duration: 10 })
 
 
 
@@ -57,7 +57,7 @@ export function ModelDetails() {
 
         for (let i = 0; i < duration; i++) {
             const interestPayment = remainingPaymentForInterest * monthlyInterest //interest payment for this month
-            remainingPaymentForInterest -= monthlyPaymentAmount 
+            remainingPaymentForInterest -= monthlyPaymentAmount
             const monthlyPayment = monthlyPaymentAmount + interestPayment
             totalMonthlyPayment += monthlyPayment
         }
@@ -80,76 +80,75 @@ export function ModelDetails() {
 
     return (
         <>
+            <header className="">
+               {car && <div className="details-header">
+                    <h1>{car.make.toUpperCase()} {carName}</h1>
+                    <img src={carImg} alt="" />
+               <span><NavLink to={'/'}>Cars</NavLink></span> 
+                </div> }
+            </header>
+
             <div className="main-container">
+                {car && <section className="model-details">
 
-                {car && <section className="model-details ">
-
-                    <div className="details-container">
-                            <h1>{car.make} {carName}</h1>
-
-                        <div className="details">
-                            <img src={carImg} alt="" />
+                    <div className="container">
+                        <div className="details-container">
                             <div className="info">
-                                <h3>Fuel type: <span>{car.fuel_type} </span> </h3>
-                                <h3>Class: <span>{car.class}</span></h3>
-                                <h3>Year: <span>{car.year}</span></h3>
+                                <h3>Fuel type:<span> {car.fuel_type} </span> </h3>
+                                <h3>Class:<span> {car.class}</span></h3>
+                                <h3>Year:<span> {car.year}</span></h3>
                                 <h3>Transmission: <span> {car.transmission}</span></h3>
                             </div>
-                        </div>
 
                             <div className="actions">
                                 <button>Get a Quote</button>
                                 <button onClick={() => togglePopup(!popup)}>Finance Offer</button>
                             </div>
-
-                    </div>
-
-
-                    {popup && <section className="finance-offer-popup">
-                        <h1 className="title">Loan Suggesiton</h1>
-                        <h3 className="name">{car.make} {car.model}</h3>
-
-                        <section className="sliders">
-
-                            <span>
-                                <label htmlFor="loanAmount">Loan amount: {loanOffer.loanAmount} NIS</label>
-                                <input type="range"
-                                    min={500}
-                                    max={10000}
-                                    id="loanAmount"
-                                    name="loanAmount"
-                                    value={loanOffer.amount}
-                                    onChange={handleChange}
-                                />
-                            </span>
-
-                            <span>
-
-                                <label htmlFor="duration">Duration: {loanOffer.duration} months</label>
-                                <input type="range"
-                                    min={5}
-                                    max={36}
-                                    id="duration"
-                                    name="duration"
-                                    placeholder="By max price"
-                                    value={loanOffer.duration}
-                                    onChange={handleChange}
-                                />
-                            </span>
-                        </section>
-
-
-                        <div className="finance-offer">
-
-                            <section className="offer">
-                                <h3>Average monthly return: <span>{getAvgMonthlyReturn().averageMonthlyPayment} NIS</span></h3>
-                                <h3>Total Payment: <span>{getAvgMonthlyReturn().totalPayment} NIS</span> </h3>
-                            </section>
-
                         </div>
 
-                    </section>}
 
+                        {popup && <section className="finance-offer-popup">
+                            <h1 className="title">Loan Suggesiton</h1>
+                            <h3 className="name">{car.make} {car.model}</h3>
+
+                            <section className="sliders">
+                                <span>
+                                    <label htmlFor="loanAmount">Loan amount: {loanOffer.loanAmount} NIS</label>
+                                    <input type="range"
+                                        min={500}
+                                        max={10000}
+                                        id="loanAmount"
+                                        name="loanAmount"
+                                        value={loanOffer.amount}
+                                        onChange={handleChange}
+                                    />
+                                </span>
+
+                                <span>
+                                    <label htmlFor="duration">Duration: {loanOffer.duration} months</label>
+                                    <input type="range"
+                                        min={5}
+                                        max={36}
+                                        id="duration"
+                                        name="duration"
+                                        placeholder="By max price"
+                                        value={loanOffer.duration}
+                                        onChange={handleChange}
+                                    />
+                                </span>
+                            </section>
+
+                            <div className="finance-offer">
+
+                                <section className="offer">
+                                    <h3>Average monthly return: <span>{getAvgMonthlyReturn().averageMonthlyPayment} NIS</span></h3>
+                                    <h3>Total Payment: <span>{getAvgMonthlyReturn().totalPayment} NIS</span> </h3>
+                                </section>
+
+                            </div>
+
+                        </section>}
+                    </div>
                 </section>}
             </div>
         </>
