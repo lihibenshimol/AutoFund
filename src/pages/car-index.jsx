@@ -25,7 +25,7 @@ export function CarIndex() {
     }
 
     function goToModels(carId) {
-        navigate(`${carId}`)
+        navigate(`/AutoFund/${carId}`)
     }
 
     return (

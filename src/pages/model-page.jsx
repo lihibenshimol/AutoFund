@@ -31,7 +31,7 @@ export function Models() {
 
                 <article className="model-list">
                     {model?.models.map(car =>
-                        <div onClick={() => navigate(`/${modelId}/${car.name}`)} className="model-preview" key={car.id}>
+                        <div onClick={() => navigate(`/AutoFund/${modelId}/${car.name}`)} className="model-preview" key={car.id}>
                               <img className='img' src={car.img} alt="car" />
                             <h1>{car.name}</h1>
                             <p>{car.price}$</p>

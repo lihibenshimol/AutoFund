@@ -9,7 +9,7 @@ export function AppHeader() {
         <header className="app-header">
             <h1>AutoFund</h1>
             <nav>
-                <NavLink to={'/'}>Cars</NavLink>
+                <NavLink to={'/AutoFund'}>Cars</NavLink>
              
             </nav>
         </header>

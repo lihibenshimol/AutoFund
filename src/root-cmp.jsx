@@ -13,9 +13,9 @@ export function RootCmp() {
             {/* <AppHeader /> */}
             <main>
                 <Routes>
-                    <Route  exact={true} element={<CarIndex/>} path='/' />
-                    <Route  exact={true} element={<Models/>} path='/:modelId' />
-                    <Route  exact={true} element={<ModelDetails/>} path='/:modelId/:carName' />
+                    <Route  exact={true} element={<CarIndex/>} path='/AutoFund' />
+                    <Route  exact={true} element={<Models/>} path='/AutoFund/:modelId' />
+                    <Route  exact={true} element={<ModelDetails/>} path='/AutoFund/:modelId/:carName' />
                 </Routes>
             </main>
 

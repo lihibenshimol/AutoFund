@@ -75,7 +75,7 @@ export function ModelDetails() {
                {car && <div className="details-header">
                     <h1>{car.make.toUpperCase()} {carName}</h1>
                     <img src={carImg} alt="" />
-               <span><NavLink to={'/'}>Cars</NavLink></span> 
+               <span><NavLink to={'/AutoFund'}>Cars</NavLink></span> 
                 </div> }
             </header>
 

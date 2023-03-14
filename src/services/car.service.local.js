@@ -36,7 +36,7 @@ async function getModelDetails(model) {
                 model: model,
             },
             headers: {
-                'X-Api-Key': key
+                'X-Api-Key': 'ebV8PLhO2MRIOCPe8W0fAA==xFcAE13SzDG1VhpU'
             },
         });
         return response.data[0]
